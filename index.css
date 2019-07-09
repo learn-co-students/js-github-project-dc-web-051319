@@ -6,8 +6,56 @@
 
 #github-container {
   display: flex;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
 }
-
+#user-list {
+  grid-column: 1;
+  padding-left: 0;
+}
+#user-list li {
+  transition: all .2s;
+  background: #dfdfdf;
+}
+#user-list li:nth-child(odd),
+#main {
+  background: #eeeeee;
+}
+#user-list li:hover {
+  cursor: pointer;
+}
+#user-list li:hover,
+#user-list li.active {
+  background: #a3a3a3;
+}
+#user-list,
+#repos-list {
+  max-height: 100vh;
+  overflow: scroll;
+}
+#repos-list {
+  background: white;
+}
+.user-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1em;
+  
+}
+.user-container,
+.user-info {
+  padding-left: 1em;
+}
+.user-info {
+  flex: 5;
+}
+.user-image {
+  flex: 1;
+}
+.user-image img {
+  max-width: 100%;
+}
 ul {
   list-style: none;
 }
